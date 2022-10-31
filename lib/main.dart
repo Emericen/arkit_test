@@ -3,7 +3,7 @@ import 'package:arkit_plugin/arkit_plugin.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
 
 void main() {
-  runApp(const FaceDetectionPage());
+  runApp(const MaterialApp(home: FaceDetectionPage()));
 }
 
 class ARSphere extends StatefulWidget {
@@ -66,13 +66,11 @@ class _FaceDetectionPageState extends State<FaceDetectionPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "AR in Flutter",
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('ARKit in Flutter'),
-        ),
-        body: const FaceDetectionPage(),
+    return Scaffold(
+      appBar: AppBar(title: const Text('ARKit Face in Flutter')),
+      body: ARKitSceneView(
+        configuration: ARKitConfiguration.faceTracking,
+        onARKitViewCreated: onARKitViewCreated,
       ),
     );
   }
