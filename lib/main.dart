@@ -66,7 +66,15 @@ class _FaceDetectionPageState extends State<FaceDetectionPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title: "AR in Flutter",
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('ARKit in Flutter'),
+        ),
+        body: const FaceDetectionPage(),
+      ),
+    );
   }
 
   void onARKitViewCreated(ARKitController arKitController) {
