@@ -47,5 +47,8 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+
+	<key>NSCameraUsageDescription</key>
+    <string>Without AR you cant use it, bitch.</string>
 </dict>
 </plist>
